@@ -8,7 +8,7 @@ function kangaroo(x1, v1, x2, v2) {
   let result = "NO";
 
   while (i < 10) {
-    console.log(`canguru 1: ${kangaroo1}  canguru 2 :${kangaroo2}`);
+    // console.log(`canguru 1: ${kangaroo1}  canguru 2 :${kangaroo2}`);
 
     kangaroo1 = kangaroo1 + v1;
     kangaroo2 = kangaroo2 + v2;

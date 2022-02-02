@@ -60,15 +60,36 @@ console.log(arr1.push("Pedro"));
 // Funciona igual ao push(), porém adiciona na primeira posição e acaba trocando o índice de todos os elementos.
 // Altera o array original com o novo valor.
 console.log(arr1.push("Amanda"));
+
 // reduce()
 // Utiliza uma função definida pelo usuário em cada um dos elementos, guardando o resultado em uma variável que pode ser acessada dentro da função que foi definida, retornando um único valor no final, reduzindo o array para um único valor.
+const array1 = [1, 2, 3, 4];
+const reducer = (previousValue, currentValue) =>
+  previousValue * currentValue + 1;
+console.log(`reducer: ${array1.reduce(reducer)}`);
+console.log(`reducer: ${array1.reduce(reducer, 5)}`);
+console.log(`reducer: ${array1.reduce(reducer, 10)}`);
+
 // reduceRight()
 // Funciona igual o reduce() porém começa do final do array e segue até o início.
+
+console.log(`reducer Right: ${array1.reduceRight(reducer)}`);
+console.log(`reducer Right: ${array1.reduceRight(reducer, 5)}`);
+console.log(`reducer Right: ${array1.reduceRight(reducer, 10)}`);
+
 // reverse()
 // Inverte a ordem dos elementos do array, então o primeiro vira o último, o segundo o penúltimo e assim por diante.
+console.log(arr1);
+console.log(arr1.reverse());
 // slice()
 // Copia uma parte do array para outro array.
+console.log(arr1.slice(0, arr1.length / 2));
+console.log(arr1.slice(arr1.length / 2));
+
 // sort()
 // Organiza o array de acordo com a classificação Unicode, onde os números vêm antes das letras, porém não funciona corretamente para números, onde temos que definir uma função que irá auxiliar o comando.
+console.log(arr1.sort());
 // splice()
 // Consegue remover, um ou mais elementos consecutivos caso o segundo parâmetro tenha um valor maior que 0, e incluir um ou mais elementos a partir de um índice escolhido.
+console.log(arr1.splice(arr1.length - 2, 2));
+console.log(arr1);
